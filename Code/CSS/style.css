@@ -1,0 +1,187 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef7f1;
+    color: #2c3e50;
+}
+
+nav .btn-container {
+    display: flex;
+    gap: 15px; /* Espace entre les boutons */
+}
+
+nav .btn {
+    background: #a7c957;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Ombre légère pour l'effet de volume */
+}
+
+nav .btn:hover {
+    background: #88b04b;
+    transform: translateY(-4px); /* Légère élévation du bouton */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
+}
+
+nav .btn:active {
+    transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #2c6e49, #1e5631);
+    color: white;
+    position: relative; /* Important pour que l'ombre soit au-dessus de la section hero */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre sous le header pour l'effet de relief */
+    z-index: 2; /* Assurer que le header soit au-dessus de la section hero */
+}
+
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.hero {
+    position: relative; /* Important pour que l'image de fond reste en arrière-plan */
+    text-align: center;
+    padding: 100px 20px 50px;
+    background-image: url('../image/backgoundHeader.png'); /* Image de fond */
+    background-size: cover; /* L'image remplit la section */
+    background-position: center bottom 950px;
+    background-repeat: no-repeat; /* Empêcher la répétition de l'image */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Positionner l'image en arrière-plan */
+}
+
+.hero h2 {
+    color: #C6DDCC;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    position: relative; /* Garder la position relative pour pouvoir le déplacer */
+    top: -50px; /* Remonter le texte de 50px vers le haut */
+    z-index: 2; /* Assurez-vous que le texte est au-dessus de l'image */
+    background-color: #3B7041;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-left: 450px;
+    margin-right: 450px;
+    border-radius: 50px;
+}
+
+.recherche {
+    background: #3B7041;
+    max-width: 80%;
+    margin: 50px auto;
+    border-radius: 100px;
+    padding: 10px;
+    position: relative;
+    top: 130px; /* Augmenter la valeur pour descendre plus bas */
+    z-index: 2;
+}
+
+.recherche > form {
+    display: flex; 
+    gap: 5px;
+}
+
+.inputDepart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px 20px 20px 50px;
+    border: none;
+}
+
+.recherche input:nth-child(2),input:nth-child(3),select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.recherche button {
+    font-size:x-large;
+    background-color: #a7c957;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 50px 50px 20px;
+    border: none;
+}
+
+.recherche button:hover {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 50px 50px 20px;
+    border: none;
+    background: #98B689;
+    color: #fff;
+    cursor: pointer;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 80px auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.step {
+    width: 240px;
+    height: 140px;
+    background: linear-gradient(135deg, #a7c957, #88b04b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 2; /* Ajout du z-index pour élever l'élément .step au-dessus des autres */
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    width: 35px;
+    height: 35px;
+    border-top: 5px solid #2c6e49;
+    border-right: 5px solid #2c6e49;
+    transform: translateY(-50%) rotate(45deg);
+    transition: z-index 0.3s ease-in-out;
+}
+
+/* Lors du survol de .step, on élève la flèche au-dessus */
+.step:hover::after {
+    z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
+}
+

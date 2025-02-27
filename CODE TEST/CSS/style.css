@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Raleway:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef7f1;
+    color: #2c3e50;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #2c6e49, #1e5631);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+}
+
+nav .btn {
+    background: #a7c957;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+nav .btn:hover {
+    background: #88b04b;
+    transform: scale(1.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px 50px;
+    background: linear-gradient(135deg, #d8e2dc, #f0f8f4);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.hero h2 {
+    color: #2c6e49;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 30px;
+}
+
+.recherche {
+    background: #8D8D8D;
+    max-width: 80%;
+    margin: 100px auto; 
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.recherche > form {
+    display: flex; 
+    gap: 5px;
+}
+
+.inputDepart {
+    width: 100%;
+    padding: 10px;
+    border-radius: 50px 20px 20px 50px;
+    border: none;
+}
+
+.recherche input:nth-child(2),input:nth-child(3),select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 50px 50px 20px;
+    border: none;
+}
+
+button:hover {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px 50px 50px 20px;
+    border: none;
+    background: green;
+    color: #fff;
+    cursor: pointer;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    margin: 80px auto;
+    max-width: 1000px;
+    position: relative;
+}
+
+.step {
+    width: 240px;
+    height: 140px;
+    background: linear-gradient(135deg, #a7c957, #88b04b);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.step:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50px;
+    width: 35px;
+    height: 35px;
+    border-top: 5px solid #2c6e49;
+    border-right: 5px solid #2c6e49;
+    transform: translateY(-50%) rotate(45deg);
+}
