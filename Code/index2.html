@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpool</title>
+    <link rel="stylesheet" href="CSS/style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css" rel="stylesheet">
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+    <header>
+
+        <i class="ri-car-fill" id="logoBurger"></i>
+        <div class="title">
+            <h1> CarPool</h1>
+        </div> 
+        <div class="CoDeco">
+            <button class="btn">Connexion</button>
+            <button class="btn">Inscription</button>
+        </div>
+    </header> 
+
+    <main>
+        <section class="acceuil">
+            <div class="centerSlogan"><span class="slogan">"Le covoiturage simplifié, pour un trajet partagé."</span></div>
+            <div class="recherche">
+                <form method="POST">
+                    <input class="depart" type="text" placeholder="Départ">
+                    <input class="destination" type="text" placeholder="Destination"> 
+                    <input class="date" type="date" value="aujourd'hui" id="date">
+        
+                    <select class="passager">
+                        <option>1 passager</option>
+                        <option>2 passagers</option>
+                        <option>3 passagers</option>
+                        <option>4 passagers</option>
+                    </select>
+        
+                    <button class="btnRechercher" type="submit">Rechercher</button>
+                </form> 
+        </div> 
+        </section>
+        <div class="burger">
+            
+        </div>
+        
+    </main>
+</body>
+</html>

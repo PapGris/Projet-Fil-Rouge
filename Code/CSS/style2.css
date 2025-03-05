@@ -1,0 +1,340 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef7f1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #71C4F1;
+    position: relative; /* Important pour que l'ombre soit au-dessus de la section hero */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre sous le header pour l'effet de relief */
+    z-index: 2; /* Assurer que le header soit au-dessus de la section hero */
+    height: 20px;
+}
+
+.acceuil {
+    background: url(../Images/backgroundAcceuil.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 300px; 
+}
+
+.centerSlogan {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+.slogan {
+    position: absolute;
+    font-size: smaller;  
+    font-weight: bold;
+}
+
+.recherche {
+    background: #71c4f182;
+    max-width: 60%;
+    margin: 0px auto;
+    border-radius: 15px;
+    padding: 3px;  
+    position: relative;
+    top: 50px;
+}
+
+.recherche form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+.depart, .destination, .date, .passager { 
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #71C4F1;
+    outline: none;
+} 
+
+.btnRechercher {
+    background-color:#a7c957 ;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+}
+
+.btnRechercher:hover {
+    background-color: #cbd7dd;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+#logoBurger {
+    font-size: 2rem;
+    color: #f1f1f1;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.CoDeco {
+    display: none;
+}
+
+.burger {
+    background-color: #3db3f2;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    margin-top: 61px;
+    display: none;
+}
+
+.burger.active { 
+    display: block;
+}
+
+#logoBurger.active {
+    transition: all 0.2s;
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+
+@media (min-width: 500px) {  
+    body {
+        border-top: 2px solid yellow;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        border-top: 2px solid red;
+    }
+    
+    .acceuil { 
+        height: 300px;
+        background-position: center;
+    }
+}
+
+@media (min-width: 992px) { 
+    body {
+        border-top: 2px solid blue;
+    }
+
+    #logoBurger {
+        display: none;
+    }
+    
+    .acceuil { 
+        height: 450px;
+        background-position: center;
+    }
+
+    .recherche{
+        background: #71c4f189;
+        max-width: 80%;
+        margin: 0px auto;
+        border-radius: 100px;
+        padding: 10px;
+        position: relative;
+        top: 408px; /* Augmenter la valeur pour descendre plus bas */
+        z-index: 2;
+    }
+
+    .recherche form{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .depart, .destination, .date, .passager { 
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    } 
+
+    .depart {
+        width: 100%;
+        padding: 10px;
+        border-radius: 50px 20px 20px 50px;
+        border: none;
+    }
+
+    .btnRechercher {
+        font-size: large;
+        background-color: #a7c957;
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 50px 50px 20px;
+        border: none;
+    }
+    
+    .btnRechercher:hover {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 50px 50px 20px;
+        border: none;
+        background: #98B689;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .CoDeco {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    header .btn {
+        background: #a7c957;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Ombre légère pour l'effet de volume */
+        margin: 6px;
+    }
+    
+    header .btn:hover {
+        background: #88b04b;
+        transform: translateY(-4px); /* Légère élévation du bouton */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
+    }
+    
+    header .btn:active {
+        transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
+    }
+}
+
+@media (min-width: 1199px) {
+    
+    body {
+        border-top: 2px solid pink;
+    }
+
+    header {
+        height: 40px;
+    }
+
+    #logoBurger {
+        display: none;
+    }
+
+    .acceuil { 
+        height: 700px;
+        background-position: center;
+    }
+
+    
+    .recherche{
+        background: #71c4f189;
+        max-width: 80%;
+        margin: 0px auto;
+        border-radius: 100px;
+        padding: 10px;
+        position: relative;
+        top: 658px; /* Augmenter la valeur pour descendre plus bas */
+        z-index: 2;
+        
+    }
+
+    .recherche form{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .depart, .destination, .date, .passager { 
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+    } 
+
+    .depart {
+        width: 100%;
+        padding: 10px;
+        border-radius: 50px 20px 20px 50px;
+        border: none;
+    }
+
+    .btnRechercher {
+        font-size: large;
+        background-color: #a7c957;
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 50px 50px 20px;
+        border: none;
+    }
+    
+    .btnRechercher:hover {
+        width: 100%;
+        padding: 10px;
+        border-radius: 20px 50px 50px 20px;
+        border: none;
+        background: #98B689;
+        color: #fff;
+        cursor: pointer;
+    }
+    
+    .slogan {
+        position: absolute;
+        font-size: 4rem;  
+        font-weight: bold;
+        margin-top: 200px; /* POUR LE DESCENDRE EN BAS */
+    } 
+
+    .CoDeco {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    header .btn {
+        background: #a7c957;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Ombre légère pour l'effet de volume */
+        margin: 6px;
+    }
+    
+    header .btn:hover {
+        background: #88b04b;
+        transform: translateY(-4px); /* Légère élévation du bouton */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
+    }
+    
+    header .btn:active {
+        transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
+    }
+} 
