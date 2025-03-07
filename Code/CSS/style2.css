@@ -10,11 +10,12 @@ body {
     font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #eef7f1;
+    background-color: #CFE0C3;
 }
 
 .title {
     margin-top: 7px;
+    margin-right: 7px;
     display: inline-block;
     align-items: center;
 }
@@ -65,17 +66,18 @@ header {
     font-family: 'Pure Milk', sans-serif;
     letter-spacing: 4px;
     color: #EBF5DF;
-    
+        
 }
 
 .recherche {
-    background: #71c4f182;
+    background: #71c4f19f;
     max-width: 60%;
     margin: 0px auto;
     border-radius: 15px;
     padding: 3px;  
     position: relative;
     top: 50px;
+    border: solid 2px #71C4F1;
 }
 
 .recherche form{
@@ -110,6 +112,7 @@ header {
 #logoBurger {
     font-size: 2rem;
     color: #f1f1f1;
+    margin-left: -10px;
 }
 
 .title {
@@ -221,10 +224,19 @@ header {
 
     .slogan {
         position: absolute;
-        font-size: 1.5rem;  
+        font-size: 2rem;  
         font-weight: bold;
         font-family: 'Pure Milk', sans-serif;
         letter-spacing: 4px;
+        text-shadow:
+        3px 3px 2px #00000036,
+        -3px 3px 2px #00000036,
+        -3px -3px 0 #00000036,
+        3px -3px 0 #00000036;
+    }
+
+    .recherche {
+        margin-top: 20px;
     }
 
     .acceuil { 
@@ -273,7 +285,7 @@ header {
     }
 
     .recherche{
-        background: #71c4f189;
+        background: #71c4f1aa;
         max-width: 80%;
         margin: 0px auto;
         border-radius: 100px;
@@ -436,71 +448,16 @@ header {
     }
 
     .acceuil { 
-        height: 700px;
+        height: 600px;
         background-position: center;
     }
 
     .slogan {
         position: absolute;
-        font-size: 4rem;  
+        font-size: 4.5rem;  
         font-weight: bold;
         margin-top: 200px; /* POUR LE DESCENDRE EN BAS */
-        font-family: 'Pure Milk', sans-serif;
-        letter-spacing: 4px;
-    } 
-    
-    .recherche{
-        background: #71c4f189;
-        max-width: 80%;
-        margin: 0px auto;
-        border-radius: 100px;
-        padding: 10px;
-        position: relative;
-        top: 658px; /* Augmenter la valeur pour descendre plus bas */
-        z-index: 2;
-        
-    }
-
-    .recherche form{
-        display: flex;
-        flex-direction: row;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    .depart, .destination, .date, .passager { 
-        width: 100%;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-    } 
-
-    .depart {
-        width: 100%;
-        padding: 10px;
-        border-radius: 50px 20px 20px 50px;
-        border: none;
-    }
-
-    .btnRechercher {
-        color: #fff;
-        font-size: large;
-        background-color: #679436;
-        width: 100%;
-        padding: 10px;
-        border-radius: 20px 50px 50px 20px;
-        border: none;
-    }
-    
-    .btnRechercher:hover {
-        width: 100%;
-        padding: 10px;
-        border-radius: 20px 50px 50px 20px;
-        border: none;
-        background: #98B689;
-        color: #fff;
-        cursor: pointer;
-    }
+    }   
     
 
     .CoDeco {
@@ -532,6 +489,10 @@ header {
     header .btn:active {
         transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
+    }
+
+    .recherche {
+        top: 560px;
     }
 
     .boxs {
