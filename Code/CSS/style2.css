@@ -61,7 +61,7 @@ header {
 
 .slogan {
     position: absolute;
-    font-size: 1.1rem;  
+    font-size: 1rem;  
     font-weight: bold;
     font-family: 'Pure Milk', sans-serif;
     letter-spacing: 4px;
@@ -110,9 +110,10 @@ header {
 }
 
 #logoBurger {
-    font-size: 2rem;
-    color: #f1f1f1;
+    font-size: 2.5rem;
+    color: #2d3e52;
     margin-left: -10px;
+    cursor: pointer;
 }
 
 .title {
@@ -192,7 +193,7 @@ header {
     transition: z-index 0.3s ease-in-out;
 }
 
-/* Lors du survol de .step, on élève la flèche au-dessus */
+/* Lors du survol de .box, on élève la flèche au-dessus */
 .box:hover::after {
     z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
 }

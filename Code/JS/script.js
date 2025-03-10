@@ -6,6 +6,9 @@ function calendrier() {
 
 calendrier(); // Met la date du jour par défaut
 
+
+// Menu Burger
+
 document.getElementById('logoBurger').addEventListener('click', function(){
     document.querySelector('.burger').classList.toggle('active')   
     document.querySelector('#logoBurger').classList.toggle('active')   
