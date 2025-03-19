@@ -1,3 +1,10 @@
+/* COULEURS 
+police : #2d3e52
+bouttons : #a7c957
+theme bleu : #71C4F1
+*/
+
+
 @font-face {
     font-family: 'Pure Milk';
     src: url('../fonts/PureMilk.otf') format('opentype');
@@ -127,32 +134,86 @@ header {
 }
 
 .burger {
-    background-color: #3db3f2;
+    background-color: #3db3f2cf;
     width: 80%;
     height: 100%;
     position: absolute;
     z-index: 9;
     top: 0;
     margin-top: 61px;
-    display: none;
+    margin-left: -100%;
+    transition: margin-left 0.3s ease-in-out; /* Ajout de la transition */
+    
+}
+
+.burger ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 80px;
+}
+
+.burger li {
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.burger li a {
+    background: #a7c957;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);  
+    color: #2d3e52;  
+}
+
+.burger li a:hover {
+    background: #88b04b;
+    color: #fff;
 }
 
 .burger.active { 
-    display: block;
+    margin-left: unset;
+    transition: all 0.3s ease-in-out;  
 }
 
-#logoBurger.active {
-    transition: all 0.2s;
-    transform: rotate(360deg);
-    cursor: pointer;
+/* Nouvelle section pour le texte sous les boîtes */
+.texte-informatif {
+    background-color: #fff;
+    padding: 20px 10px;
+    margin: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
+
+.texte-informatif p {
+    font-size: 1rem;
+    color: #2d3e52;
+    font-weight: 400;
+    line-height: 1.2;
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+    font-family: 'Nunito', sans-serif;
+}
+
 
 .boxs {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 60px;
-    margin: 30px auto;
+    margin: 10px;
     max-width: 1000px;
     position: relative;
 }
@@ -193,10 +254,82 @@ header {
     transition: z-index 0.3s ease-in-out;
 }
 
-/* Lors du survol de .box, on élève la flèche au-dessus */
 .box:hover::after {
-    z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
+    z-index: 3; 
 }
+
+
+footer {
+    background-color: #71C4F1;
+    color: #2d3e52;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 2px solid #a7c957;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    
+    flex-grow: 1; /* Ajout de cette ligne */
+}
+
+.footer-logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.footer-links,
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links ul,
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-socials li {
+    margin: 5px 0;
+}
+
+.footer-links a,
+.footer-socials a {
+    color: #2d3e52;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    color: #a7c957;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #2d3e52;
+    width: 100%; /* S'assurer que cette section occupe toute la largeur disponible */
+    margin-top: 20px; /* Ajout d'un espacement pour le séparer un peu */
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    font-weight: 400;
+}
+
 
 /*=============================================================================================================\
 |                                          500 PX                                                              |
@@ -243,6 +376,10 @@ header {
     .acceuil { 
         height: 300px;
         background-position: center;
+    }
+
+    .texte-informatif p {
+        font-size: 1.4rem;
     }
 }
 
@@ -343,7 +480,7 @@ header {
     }
 
     header .btn {
-        background: #a7c957;
+        background: #88b04b;
         color: white;
         border: none;
         padding: 12px 20px;
@@ -357,7 +494,7 @@ header {
     }
     
     header .btn:hover {
-        background: #88b04b;
+        background: #a7c957;       
         transform: translateY(-4px); /* Légère élévation du bouton */
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
     }
@@ -416,6 +553,20 @@ header {
     .box:hover::after {
         z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
     }
+
+    .texte-informatif {
+        margin-top: 100px;
+    }
+
+    .texte-informatif p {
+        font-size: 1.5rem;
+        max-width: 80%;
+    }
+
+    .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
 }
 
 /*=============================================================================================================\
@@ -468,7 +619,7 @@ header {
     }
 
     header .btn {
-        background: #679436;
+        background: #88b04b;
         color: white;
         border: none;
         padding: 12px 20px;
@@ -482,7 +633,7 @@ header {
     }
     
     header .btn:hover {
-        background: #88b04b;
+        background: #679436;
         transform: translateY(-4px); /* Légère élévation du bouton */
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
     }
@@ -545,5 +696,10 @@ header {
     /* Lors du survol de .step, on élève la flèche au-dessus */
     .box:hover::after {
         z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
+    }
+
+    .footer-logo img {
+        width: 150px;
+        height: 150px;
     }
 } 
