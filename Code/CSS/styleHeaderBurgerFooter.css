@@ -1,0 +1,337 @@
+/* HEADER */
+.title {
+    margin-top: 7px;
+    margin-right: 7px;
+    display: inline-block;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Pure Milk', sans-serif;
+    font-size: 3.0rem;
+    letter-spacing: 3px;
+    color: #2d3e52;
+}
+
+.logoCarPool {
+    width: 50px;
+    height: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #71C4F1;
+    position: relative;
+    /* Important pour que l'ombre soit au-dessus de la section hero */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Ombre sous le header pour l'effet de relief */
+    z-index: 2;
+    /* Assurer que le header soit au-dessus de la section hero */
+    height: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.CoDeco {
+    display: none;
+}
+
+/* BURGER */
+
+#logoBurger {
+    font-size: 2.5rem;
+    color: #2d3e52;
+    margin-left: -10px;
+    cursor: pointer;
+}
+
+.burger {
+    background-color: #3db3f2cf;
+    width: 80%;
+    height: 100vh;
+    /* Assurer que le menu couvre toute la hauteur de l'écran */
+    position: fixed;
+    /* Remplace `absolute` pour que le menu reste toujours visible */
+    top: 0;
+    left: 0;
+    /* S'assurer qu'il commence bien à gauche */
+    z-index: 999;
+    /* Le mettre au-dessus des autres éléments */
+    margin-left: -100%;
+    /* Caché par défaut */
+    margin-top: 58px;
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+    /* Utilisation de flexbox */
+    flex-direction: column;
+    /* Organiser les liens en colonne */
+    justify-content: center;
+    /* Centrer verticalement */
+    align-items: center;
+    /* Centrer horizontalement */
+}
+
+.burger ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: -70px;
+}
+
+.burger li {
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.burger li a {
+    background: #a7c957;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    color: #2d3e52;
+}
+
+.burger li a:hover {
+    background: #88b04b;
+    color: #fff;
+}
+
+.burger.active {
+    margin-left: unset;
+    transition: all 0.3s ease-in-out;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #71C4F1;
+    color: #2d3e52;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-top: 2px solid #a7c957;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    /* Ajout de cette ligne */
+}
+
+.footer-logo img {
+    width: 90px;
+    height: 90px;
+}
+
+.footer-links,
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links,
+.footer-socials,
+.footer-logo {
+    width: 33%;
+    text-align: center;
+}
+
+.footer-links ul,
+.footer-socials ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li,
+.footer-socials li {
+    margin: 5px 0;
+}
+
+.footer-links a,
+.footer-socials a {
+    color: #2d3e52;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+    text-align: justify;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
+    color: #679436;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #2d3e52;
+    width: 100%;
+    /* S'assurer que cette section occupe toute la largeur disponible */
+    margin-top: 20px;
+    /* Ajout d'un espacement pour le séparer un peu */
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    font-weight: 400;
+}
+
+/*=============================================================================================================\
+|                                          500 PX                                                              |
+|                                                                                                              |
+|                                                                                                              |
+\=============================================================================================================*/
+
+@media (min-width: 500px) {
+}
+
+/*=============================================================================================================\
+|                                          768 PX                                                              |
+|                                                                                                              |
+|                                                                                                              |
+\=============================================================================================================*/
+
+@media (min-width: 768px) {
+    h1 {
+        font-family: 'Pure Milk', sans-serif;
+        font-size: 3.0rem;
+        letter-spacing: 3px;
+    }
+}
+
+/*=============================================================================================================\
+|                                          992 PX                                                              |
+|                                                                                                              |
+|                                                                                                              |
+\=============================================================================================================*/
+
+@media (min-width: 992px) {
+    body {
+        border-top: 2px solid blue;
+    }
+
+    #logoBurger {
+        display: none;
+    }
+
+    h1 {
+        font-family: 'Pure Milk', sans-serif;
+        font-size: 4.0rem;
+        letter-spacing: 3px;
+    }
+
+    .logoCarPool {
+        margin-bottom: 4px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .CoDeco {
+        display: block;
+        position: absolute;
+        right: 30px;
+    }
+
+    header .btn {
+        background: #88b04b;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        /* Ombre légère pour l'effet de volume */
+        margin: 6px;
+    }
+
+    header .btn:hover {
+        background: #679436;
+        transform: translateY(-4px);
+        /* Légère élévation du bouton */
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+        /* Ombre plus marquée pour un effet de surélévation */
+    }
+
+    header .btn:active {
+        transform: translateY(2px);
+        /* Lorsque le bouton est cliqué, il descend légèrement */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+        /* Ombre plus douce pendant l'activation */
+    }
+
+    .footer-links a,
+    .footer-socials a {
+        font-size: 1rem;
+    }
+
+    .footer-logo img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*=============================================================================================================\
+|                                          1199 PX                                                             |
+|                                                                                                              |
+|                                                                                                              |
+\=============================================================================================================*/
+
+@media (min-width: 1199px) {
+
+    header {
+        height: 40px;
+    }
+
+    h1 {
+        font-family: 'Pure Milk', sans-serif;
+        font-size: 4rem;
+        letter-spacing: 3px;
+    }
+
+    .logoCarPool {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer-logo img {
+        width: 150px;
+        height: 150px;
+    }
+}

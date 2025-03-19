@@ -4,13 +4,25 @@ bouttons : #a7c957
 theme bleu : #71C4F1
 */
 
+/* COULEURS */
+:root {
+    --primary-color: #2d3e52;
+    /* Couleur principale de la police */
+    --button-color: #a7c957;
+    /* Couleur des boutons */
+    --blue-theme: #71C4F1;
+    /* Couleur bleue du thème */
+}
 
-@font-face {
+/* ACCUEIL */
+
+@font-face { /*  */
     font-family: 'Pure Milk';
     src: url('../fonts/PureMilk.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-}
+} 
+
 
 
 body {
@@ -20,42 +32,12 @@ body {
     background-color: #CFE0C3;
 }
 
-.title {
-    margin-top: 7px;
-    margin-right: 7px;
-    display: inline-block;
-    align-items: center;
-}
-
-h1 {
-    font-family: 'Pure Milk', sans-serif;
-    font-size: 3.0rem;
-    letter-spacing: 3px;
-    color: #2d3e52;
-}
-
-.logoCarPool {
-    width: 50px;
-    height: 50px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #71C4F1;
-    position: relative; /* Important pour que l'ombre soit au-dessus de la section hero */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Ombre sous le header pour l'effet de relief */
-    z-index: 2; /* Assurer que le header soit au-dessus de la section hero */
-    height: 20px;
-}
-
 .acceuil {
     background: url(../Images/backgroundAcceuil.jpg);
     background-size: cover;
     width: 100%;
     height: 300px; 
+    margin-top: 58px;
 }
 
 .centerSlogan {
@@ -116,75 +98,6 @@ header {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
-#logoBurger {
-    font-size: 2.5rem;
-    color: #2d3e52;
-    margin-left: -10px;
-    cursor: pointer;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.CoDeco {
-    display: none;
-}
-
-.burger {
-    background-color: #3db3f2cf;
-    width: 80%;
-    height: 100%;
-    position: absolute;
-    z-index: 9;
-    top: 0;
-    margin-top: 61px;
-    margin-left: -100%;
-    transition: margin-left 0.3s ease-in-out; /* Ajout de la transition */
-    
-}
-
-.burger ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 80px;
-}
-
-.burger li {
-    list-style: none;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.2rem;
-    color: #fff;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
-
-.burger li a {
-    background: #a7c957;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);  
-    color: #2d3e52;  
-}
-
-.burger li a:hover {
-    background: #88b04b;
-    color: #fff;
-}
-
-.burger.active { 
-    margin-left: unset;
-    transition: all 0.3s ease-in-out;  
-}
 
 /* Nouvelle section pour le texte sous les boîtes */
 .texte-informatif {
@@ -260,76 +173,6 @@ header {
 }
 
 
-footer {
-    background-color: #71C4F1;
-    color: #2d3e52;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    border-top: 2px solid #a7c957;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;    
-    flex-grow: 1; /* Ajout de cette ligne */
-}
-
-.footer-logo img {
-    width: 90px;
-    height: 90px;
-}
-
-.footer-links,
-.footer-socials {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.footer-links ul,
-.footer-socials ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li,
-.footer-socials li {
-    margin: 5px 0;
-}
-
-.footer-links a,
-.footer-socials a {
-    color: #2d3e52;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out;
-}
-
-.footer-links a:hover,
-.footer-socials a:hover {
-    color: #679436;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #2d3e52;
-    width: 100%; /* S'assurer que cette section occupe toute la largeur disponible */
-    margin-top: 20px; /* Ajout d'un espacement pour le séparer un peu */
-}
-
-.footer-bottom p {
-    margin: 10px 0;
-    font-weight: 400;
-}
-
 
 /*=============================================================================================================\
 |                                          500 PX                                                              |
@@ -353,12 +196,6 @@ footer {
     body {
         border-top: 2px solid red;
     }
-    
-    h1 {
-        font-family: 'Pure Milk', sans-serif;
-        font-size: 3.0rem;
-        letter-spacing: 3px;
-    }
 
     .slogan {
         position: absolute;
@@ -371,6 +208,7 @@ footer {
         -3px 3px 2px #00000036,
         -3px -3px 0 #00000036,
         3px -3px 0 #00000036;
+        color: #EBF5DF;
     }
 
     .recherche {
@@ -386,9 +224,9 @@ footer {
         font-size: 1.2rem;
     }
 
-        .box {
-            font-size: 1em;
-        }
+    .box {
+        font-size: 1em;
+    }
 }
 
 /*=============================================================================================================\
@@ -400,22 +238,6 @@ footer {
 @media (min-width: 992px) { 
     body {
         border-top: 2px solid blue;
-    }
-
-    #logoBurger {
-        display: none;
-    }
-
-    h1 {
-        font-family: 'Pure Milk', sans-serif;
-        font-size: 4.0rem;
-        letter-spacing: 3px;
-    }
-
-    .logoCarPool {
-        margin-bottom: 4px;
-        width: 70px;
-        height: 70px;
     }
 
     .slogan {
@@ -483,37 +305,6 @@ footer {
         cursor: pointer;
     }
 
-    .CoDeco {
-        display: block;
-        position: absolute;
-        right: 30px;
-    }
-
-    header .btn {
-        background: #88b04b;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        cursor: pointer;
-        border-radius: 25px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Ombre légère pour l'effet de volume */
-        margin: 6px;
-    }
-    
-    header .btn:hover {
-        background: #679436;
-        transform: translateY(-4px); /* Légère élévation du bouton */
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
-    }
-    
-    header .btn:active {
-        transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
-    }
-
     .boxs {
         display: flex;
         justify-content: center;
@@ -573,16 +364,6 @@ footer {
         font-size: 1.5rem;
         max-width: 80%;
     }
-
-    .footer-links a,
-    .footer-socials a {
-        font-size: 1rem;
-    }
-
-    .footer-logo img {
-        width: 100px;
-        height: 100px;
-    }
 }
 
 /*=============================================================================================================\
@@ -597,21 +378,6 @@ footer {
         border-top: 2px solid pink;
     }
 
-    header {
-        height: 40px;
-    }
-
-    h1 {
-        font-family: 'Pure Milk', sans-serif;
-        font-size: 5.8rem;
-        letter-spacing: 3px;
-    }
-
-    .logoCarPool {
-        width: 90px;
-        height: 90px;
-    }
-
     .acceuil { 
         height: 600px;
         background-position: center;
@@ -624,10 +390,5 @@ footer {
 
     .recherche {
         top: 560px;
-    }
-
-    .footer-logo img {
-        width: 150px;
-        height: 150px;
     }
 } 
