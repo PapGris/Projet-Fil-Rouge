@@ -63,6 +63,7 @@ header {
     width: 100%;
     justify-content: center;
     position: relative;
+    text-align: center;
     top: 20px;
 }
 
@@ -73,7 +74,6 @@ header {
     font-family: 'Pure Milk', sans-serif;
     letter-spacing: 4px;
     color: #EBF5DF;
-        
 }
 
 .recherche {
@@ -83,7 +83,7 @@ header {
     border-radius: 15px;
     padding: 3px;  
     position: relative;
-    top: 50px;
+    top: 70px;
     border: solid 2px #71C4F1;
 }
 
@@ -159,7 +159,7 @@ header {
     list-style: none;
     padding: 20px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #fff;
     cursor: pointer;
     transition: background 0.3s ease-in-out;
@@ -197,7 +197,7 @@ header {
 }
 
 .texte-informatif p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #2d3e52;
     font-weight: 400;
     line-height: 1.2;
@@ -233,6 +233,7 @@ header {
     position: relative;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 0.9em;
 }
 
 .box:hover {
@@ -382,8 +383,12 @@ footer {
     }
 
     .texte-informatif p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
+
+        .box {
+            font-size: 1em;
+        }
 }
 
 /*=============================================================================================================\

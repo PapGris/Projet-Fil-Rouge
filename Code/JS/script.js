@@ -20,7 +20,7 @@ logoBurger.addEventListener('click', function(event) { // Au clic sur le logo
 
     // Appliquer une rotation à chaque clic
     let rotationAngle = logoBurger.classList.contains('active') ? 360 : 0; // Si la classe active est présente, rotation de 360° sinon 0°
-    logoBurger.style.transition = "transform 0.2s"; // Animation de la rotation
+    logoBurger.style.transition = "transform 0.8s"; // Animation de la rotation
     logoBurger.style.transform = `rotate(${rotationAngle}deg)`; // Rotation
 
     // Empêcher la propagation pour éviter la fermeture immédiate
@@ -34,7 +34,7 @@ document.addEventListener('click', function(event) { // Au clic sur le document
         logoBurger.classList.remove('active'); // Retirer la classe active
         
         // Réinitialiser la rotation
-        logoBurger.style.transition = "transform 0.2s"; // Animation de la rotation
+        logoBurger.style.transition = "transform 0.8s"; // Animation de la rotation
         logoBurger.style.transform = "rotate(0deg)"; // Rotation
     }
 });
