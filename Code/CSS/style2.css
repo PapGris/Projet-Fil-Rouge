@@ -274,8 +274,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    
+    width: 100%;    
     flex-grow: 1; /* Ajout de cette ligne */
 }
 
@@ -307,14 +306,14 @@ footer {
 .footer-socials a {
     color: #2d3e52;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
 }
 
 .footer-links a:hover,
 .footer-socials a:hover {
-    color: #a7c957;
+    color: #679436;
 }
 
 .footer-bottom {
@@ -334,7 +333,9 @@ footer {
 /*=============================================================================================================\
 |                                          500 PX                                                              |
 |                                                                                                              |
+|                                                                                                              |
 \=============================================================================================================*/
+
 @media (min-width: 500px) {  
     body {
         border-top: 2px solid yellow;
@@ -344,7 +345,9 @@ footer {
 /*=============================================================================================================\
 |                                          768 PX                                                              |
 |                                                                                                              |
+|                                                                                                              |
 \=============================================================================================================*/
+
 @media (min-width: 768px) {
     body {
         border-top: 2px solid red;
@@ -386,7 +389,9 @@ footer {
 /*=============================================================================================================\
 |                                          992 PX                                                              |
 |                                                                                                              |
+|                                                                                                              |
 \=============================================================================================================*/
+
 @media (min-width: 992px) { 
     body {
         border-top: 2px solid blue;
@@ -494,7 +499,7 @@ footer {
     }
     
     header .btn:hover {
-        background: #a7c957;       
+        background: #679436;
         transform: translateY(-4px); /* Légère élévation du bouton */
         box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
     }
@@ -503,6 +508,7 @@ footer {
         transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
     }
+
     .boxs {
         display: flex;
         justify-content: center;
@@ -563,6 +569,11 @@ footer {
         max-width: 80%;
     }
 
+    .footer-links a,
+    .footer-socials a {
+        font-size: 1rem;
+    }
+
     .footer-logo img {
         width: 100px;
         height: 100px;
@@ -572,7 +583,9 @@ footer {
 /*=============================================================================================================\
 |                                          1199 PX                                                             |
 |                                                                                                              |
+|                                                                                                              |
 \=============================================================================================================*/
+
 @media (min-width: 1199px) {
     
     body {
@@ -590,13 +603,8 @@ footer {
     }
 
     .logoCarPool {
-        margin-bottom: 4px;
         width: 90px;
         height: 90px;
-    }
-
-    #logoBurger {
-        display: none;
     }
 
     .acceuil { 
@@ -605,97 +613,12 @@ footer {
     }
 
     .slogan {
-        position: absolute;
         font-size: 4.5rem;  
-        font-weight: bold;
         margin-top: 200px; /* POUR LE DESCENDRE EN BAS */
     }   
-    
-
-    .CoDeco {
-        display: block;
-        position: absolute;
-        right: 30px;
-    }
-
-    header .btn {
-        background: #88b04b;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        cursor: pointer;
-        border-radius: 25px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: background 0.3s ease-in-out, transform 0.2s, box-shadow 0.3s ease-in-out;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Ombre légère pour l'effet de volume */
-        margin: 6px;
-    }
-    
-    header .btn:hover {
-        background: #679436;
-        transform: translateY(-4px); /* Légère élévation du bouton */
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25); /* Ombre plus marquée pour un effet de surélévation */
-    }
-    
-    header .btn:active {
-        transform: translateY(2px); /* Lorsque le bouton est cliqué, il descend légèrement */
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15); /* Ombre plus douce pendant l'activation */
-    }
 
     .recherche {
         top: 560px;
-    }
-
-    .boxs {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 60px;
-        margin: 80px auto;
-        max-width: 1000px;
-        position: relative;
-    }
-    
-    .box {
-        width: 240px;
-        height: 140px;
-        background: linear-gradient(135deg, #a7c957, #88b04b);
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 20px;
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        position: relative;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    
-    .box:hover {
-        transform: scale(1.1);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-        z-index: 2; /* Ajout du z-index pour élever l'élément .step au-dessus des autres */
-    }
-    
-    .box:not(:last-child)::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: -50px;
-        width: 35px;
-        height: 35px;
-        border-top: 5px solid #2c6e49;
-        border-right: 5px solid #2c6e49;
-        transform: translateY(-50%) rotate(45deg);
-        transition: z-index 0.3s ease-in-out;
-    }
-    
-    /* Lors du survol de .step, on élève la flèche au-dessus */
-    .box:hover::after {
-        z-index: 3; /* Assure que la flèche est au-dessus des autres éléments */
     }
 
     .footer-logo img {
