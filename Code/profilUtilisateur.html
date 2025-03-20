@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpool - Inscription</title>
+    <link rel="stylesheet" href="CSS/styleProfilUtilisateur.css"> 
+    <link rel="stylesheet" href="CSS/styleHeaderBurgerFooter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search_hands_free"/>
+    <script src="JS/scriptInscription.js" defer></script>
+    <script src="JS/script.js" defer></script>
+</head>
+<body>
+
+    <div class="burger">            
+        <ul>
+            <li><a href="indexConnecte.html" class="nav-item">Accueil</a></li>
+            <li><a href="#" class="nav-item">Qui sommes nous ?</a></li>
+            <li><a href="#" class="nav-item">Proposer un trajet</a></li>
+            <li><a href="#" class="nav-item">Contactez-nous</a></li>
+        </ul>           
+    </div>
+
+    <header>
+        <div class="headerContainer">
+            <i class="material-symbols-outlined" id="logoBurger">
+                search_hands_free
+            </i>
+
+            <div class="title">
+                <a href="indexConnecte.html"><img class="logoCarPool" src="Images/logoCarPool.png" alt="Logo CarPool"></a>
+                <h1>CarPool</h1>
+            </div> 
+            <div class="CoDeco">
+                <a href="profilUtilisateur.html"><button class="btn">Mon profil</button></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="profile-container">
+            <div class="profile-header">
+                <img src="Images/person.jpg" alt="Photo de profil" class="profile-pic">
+                <h1 class="profile-name">Papillon-Gris</h1>
+            </div>
+            
+            <div class="infoButton">
+                <div class="profile-info">
+                    <p><span class="icon">&#128100;</span><strong>Nom :</strong><span class="info-value">John Doe</span></p>
+                    <p><span class="icon">&#x2709;</span><strong>Email :</strong><br><span class="info-value">johndoe@example.com</span></p>
+                    <p><span class="icon">&#128222;</span><strong>Téléphone :</strong><br><span class="info-value">06 25 54 43 61</span></p>
+                    <p><span class="icon">&#x1F30D;</span><strong>Lieu :</strong><br><span class="info-value">Paris, France</span></p>
+                </div>
+
+                <div class="profile-actions">
+                    <button class="edit-button">Modifier le profil</button>
+                    <button class="history-button">Historique des trajets</button>
+                    <button class="notifications-button">Notifications</button>
+                    <button class="logout-button">Déconnexion</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">À propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                </ul>
+            </div>
+            <div class="footer-logo">
+                <a href="index2.html"><img class="logoCarPool"  src="Images/logoCarPool.png" alt="Logo CarPool"></a>
+            </div>
+            <div class="footer-socials">
+                <ul>
+                    <li><a href="#" class="social-link">Facebook</a></li>
+                    <li><a href="#" class="social-link">Twitter</a></li>
+                    <li><a href="#" class="social-link">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 CarPool. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>

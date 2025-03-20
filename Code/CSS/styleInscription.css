@@ -100,10 +100,31 @@ h2 {
     text-align: center;
 }
 
-form {
+.formI-container {
     background-color: #71c4f1d4;
-    margin-top: 100px;
+    margin-top: 400px;
     margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* 100% pour qu'il s'adapte à la taille de l'écran */
+    max-width: 350px;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    /* Pour éviter que le padding n'affecte la taille totale */
+    border: solid 2px #1390d4cf;
+}
+
+.formC-container {
+    background-color: #71c4f1d4;
+    margin-top: 130px;
+    margin-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 8px;
@@ -131,7 +152,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="email"],
-input[type="number"] {
+input[type="tel"] {
     width: 100%;
     padding: 8px;
     border: 2px solid #1390d4cf;
@@ -144,7 +165,7 @@ input[type="number"] {
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
-input[type="number"]:focus {
+input[type="tel"]:focus {
     border-color: var(--blue-theme);
     outline: none;
 }
@@ -170,7 +191,7 @@ input[type="number"]:focus {
     cursor: pointer;
 }
 
-.boutonAccueil {
+.boutonAccueil, .boutonMdp {
     width: 100%;
     padding: 10px;
     background-color: var(--button-color);
@@ -194,7 +215,7 @@ input[type="number"]:focus {
     border: #333 solid;
 }
 
-#btn:hover, .boutonAccueil:hover, .butonCond:hover {
+#btn:hover, .boutonAccueil:hover, .butonCond:hover, .boutonMdp:hover {
     background: #88b04b;
     color: #fff;
 }
@@ -232,7 +253,7 @@ input[type="number"]:focus {
     input[type="text"],
     input[type="password"],
     input[type="email"],
-    input[type="number"] {
+    input[type="tel"] {
         font-size: 15px;
     }
 
@@ -262,7 +283,7 @@ input[type="number"]:focus {
     input[type="text"],
     input[type="password"],
     input[type="email"],
-    input[type="number"] {
+    input[type="tel"] {
         font-size: 16px;
     }
 
@@ -293,7 +314,7 @@ input[type="number"]:focus {
     input[type="text"],
     input[type="password"],
     input[type="email"],
-    input[type="number"] {
+    input[type="tel"] {
         font-size: 18px;
     }
 
@@ -323,7 +344,7 @@ input[type="number"]:focus {
     input[type="text"],
     input[type="password"],
     input[type="email"],
-    input[type="number"] {
+    input[type="tel"] {
         font-size: 20px;
     }
 
