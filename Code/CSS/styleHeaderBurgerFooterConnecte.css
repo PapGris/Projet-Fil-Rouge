@@ -40,6 +40,10 @@ header {
     z-index: 9999;
 }
 
+a {
+    text-decoration: none;
+}
+
 .headerContainer {
     display: flex;
     justify-content: space-between;
@@ -243,9 +247,23 @@ footer {
     }
 
     .CoDeco {
-        display: block;
+        display: flex;
+        align-items: center;
+        /* Aligne verticalement */
+        gap: 10px;
+        /* Ajoute un espace entre l'image et le bouton */
         position: absolute;
         right: 30px;
+    }
+
+    .profile-picMini {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: #a7c957 solid 2px;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+        transition: transform 0.8s ease, border-radius 0.8s ease, margin-top 0.8s ease;
+        margin-top: 3px;
     }
 
     header .btn {

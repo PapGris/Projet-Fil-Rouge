@@ -156,7 +156,7 @@ body {
 }
 
 .box:not(:last-child)::after {
-    content: '';
+    content: ''; 
     position: absolute;
     top: 50%;
     right: -50px;
@@ -330,6 +330,10 @@ body {
         position: relative;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    a {
+        text-decoration: none;
     }
     
     .box:hover {
